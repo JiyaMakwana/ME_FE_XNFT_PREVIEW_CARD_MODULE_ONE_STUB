@@ -68,6 +68,9 @@ body {
 
 .card__title {
   margin-top: 14px;
+}
+
+.card__title h1 {
   font-size: 15px;
   font-weight: 600;
   color: #f5f6fa;
@@ -162,4 +165,3 @@ body {
 .attribution a:hover {
   color: #7ee8e0;
 }
-
