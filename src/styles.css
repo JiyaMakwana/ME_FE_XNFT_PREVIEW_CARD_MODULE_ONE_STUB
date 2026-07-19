@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: #12141c;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 48px 16px;
+}
+
+.card {
+  width: 210px;
+  background-color: #1a1d29;
+  border: 1px solid #262a3a;
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* ---------- image + hover layer ---------- */
+
+.card__images {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card__images-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card__images-layer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(10, 12, 20, 0.55);
+  color: #ffffff;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.card__images-layer img {
+  width: 26px;
+  height: 26px;
+}
+
+.card__images:hover .card__images-layer {
+  opacity: 1;
+}
+
+/* ---------- text content ---------- */
+
+.card__title {
+  margin-top: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #f5f6fa;
+}
+
+.card__info {
+  margin-top: 6px;
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: #8891ab;
+}
+
+/* ---------- price / time row ---------- */
+
+.card__time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #262a3a;
+}
+
+.card__time-left,
+.card__time-right {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.card__time-left img,
+.card__time-right img {
+  width: 14px;
+  height: 14px;
+}
+
+.card__time-left {
+  color: #2ee6c9;
+}
+
+.card__time-right {
+  color: #7c86a3;
+}
+
+.card__divider {
+  display: none;
+  border: none;
+}
+
+/* ---------- creator row ---------- */
+
+.card__creator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.card__creator-img {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.card__creator-text {
+  font-size: 11px;
+  color: #8891ab;
+}
+
+.card__creator-name {
+  color: #f5f6fa;
+  font-weight: 600;
+}
+
+/* ---------- footer attribution ---------- */
+
+.attribution {
+  font-size: 11px;
+  color: #5b6480;
+  text-align: center;
+}
+
+.attribution a {
+  color: #2ee6c9;
+  text-decoration: underline;
+}
+
+.attribution a:hover {
+  color: #7ee8e0;
+}
+
